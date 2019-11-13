@@ -27,3 +27,6 @@ project/target
 
 ### JVM crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+### prometheus jar
+jmx_prometheus_javaagent-0.12.0.jar

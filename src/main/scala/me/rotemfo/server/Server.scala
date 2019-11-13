@@ -19,14 +19,15 @@ import scala.io.StdIn
 object Server extends App with Logging {
   implicit val actorSystem: ActorSystem = ActorSystem("demo-server")
   implicit val executionContext: ExecutionContextExecutor = actorSystem.dispatcher
-  implicit val materializer = ActorMaterializer()
+  implicit val materializer: ActorMaterializer = ActorMaterializer()
 
-  private final val host: String = "127.0.0.1"
+  private final val host: String = "0.0.0.0"
   private final val port: Int = 8080
 
   val bindingFuture = Http().bindAndHandle(UsersRoute.routes, host, port)
   logger.info(s"server is up and running at: $host:$port")
-  logger.info(s"serving: http://${host}:${port}/api/v1/users")
+  logger.info(s"serving: http://$host:$port/api/v1/users")
+  val client = actorSystem.actorOf(Client.props)
   StdIn.readLine() // let it run until user presses return
   bindingFuture
     .flatMap(_.unbind()) // trigger unbinding from the port

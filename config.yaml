@@ -14,18 +14,18 @@ blacklistObjectNames: ["jvm.memory.bytes.used:type=area,*",
 
 rules:
   - pattern: 'me.rotemfo.counters.timer<type=ROOT, name=(.*)><>Count'
-    name: upstream_root_counter_$1
+    name: rotem_root_counter_$1
   - pattern: 'me.rotemfo.counters.timer<type=HTTP, name=(.*)><>Count'
-    name: upstream_counter_$1
+    name: rotem_counter_$1
   - pattern: 'me.rotemfo.counters.timer<type=HTTP, name=(.*)><>Max'
-    name: upstream_counter_max_$1
+    name: rotem_counter_max_$1
   - pattern: 'me.rotemfo.counters.timer<type=HTTP, name=(.*)><>Min'
-    name: upstream_counter_min_$1
+    name: rotem_counter_min_$1
   - pattern: 'me.rotemfo.counters.meter<type=HTTP, name=(.*)><>Count'
-    name: upstream_meter_$1
+    name: rotem_meter_$1
   - pattern: 'me.rotemfo.counters.meter<type=HTTP, name=(.*)><>MeanRate'
-    name: upstream_meter_meanrate_$1
+    name: rotem_meter_meanrate_$1
   - pattern: 'me.rotemfo.counters.meter<type=HTTP, name=(.*)><>OneMinuteRate'
-    name: upstream_meter_1minrate_$1
+    name: rotem_meter_1minrate_$1
   - pattern: 'me.rotemfo.counters.meter<type=HTTP, name=(.*)><>FiveMinuteRate'
-    name: upstream_meter_5minrate_$1
+    name: rotem_meter_5minrate_$1
