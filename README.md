@@ -1,5 +1,5 @@
 # Demo Server
-This is a demo server written in scala, which exposes a single api ```/v1/api/violations``` and 
+This is a demo server written in scala, which exposes a single api ```/v1/api/users``` and 
 exports some JMX metrics
  
 ## How to run
@@ -20,7 +20,7 @@ From the command prompt issue:
 
 ### Execute some calls
 ```
-for l in {1..50}; do curl localhost:8080/api/v1/violations; done
+for l in {1..50}; do curl localhost:8080/api/v1/users; done
 ```
 
 ### Check JMX values exported 
