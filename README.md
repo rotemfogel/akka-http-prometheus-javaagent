@@ -1,6 +1,7 @@
 # Demo Server
 This is a demo server written in scala, which exposes a single api ```/v1/api/users``` and 
-exports some JMX metrics
+exports some JMX metrics.
+The API returns different error codes (2xx,3xx,4xx,5xx)
  
 ## How to run
 ### Prerequisites
