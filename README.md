@@ -26,4 +26,4 @@ for l in {1..50}; do curl localhost:8080/api/v1/users; done
 
 ### Check JMX values exported 
 * Open your browser at ```http://localhost:8081```
-* Check upstream metrics are exported 
+* Check me_rotemfo metrics are exported 
